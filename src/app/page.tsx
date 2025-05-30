@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
 
   return (
-    <div className="min-h-screen my-8 flex flex-col justify-center items-center bg-white dark:bg-neutral-900">
+    <div className="min-h-screen py-8 flex flex-col justify-center items-center bg-white dark:bg-neutral-900">
       <div className="w-full max-w-4xl">
         <section className="w-full text-center">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 mb-4 dark:bg-neutral-800 dark:text-gray-200">
