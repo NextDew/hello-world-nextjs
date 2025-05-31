@@ -120,3 +120,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes border-glow { /* glow-border dominicus */
+  0% {
+    box-shadow: 0 0 5px #00faff, 0 0 10px #00faff;
+  }
+  50% {
+    box-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+  }
+  100% {
+    box-shadow: 0 0 5px #00faff, 0 0 10px #00faff;
+  }
+}
+
+.glow-border { /* glow-border dominicus */
+  animation: border-glow 2s ease-in-out infinite;
+  border: 2px solid #00faff;
+  z-index: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+}
