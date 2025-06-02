@@ -58,7 +58,7 @@ const opciones = [
 export default function KevinPage() {
 
   return (
-    <div className="min-h-screen flex flex-col py-10 items-center bg-gray-50 dark:bg-neutral-900 transition-colors">
+    <div className="min-h-screen flex flex-col py-10 items-center transition-colors">
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 text-gray-900 dark:text-gray-100">
         Instalación y puesta en marcha
       </h1>
