@@ -27,7 +27,7 @@ const descriptions: Record<string, string> = {
   "next.config.ts": "Archivo de configuración principal de Next.js donde puedes personalizar rutas, imágenes, middleware, etc.",
   "package-lock.json": "Registra las versiones exactas de cada dependencia instalada para asegurar instalaciones consistentes en todos los entornos.",
   "postcss.config.mjs": "Configura PostCSS, un procesador de CSS usado junto con Tailwind o autoprefixer. .mjs indica que usa módulos ES.",
-  "tsconfig.json": "Archivo de configuración para TypeScript, define cómo se compila tu código.",
+  "tsconfig.json": "Archivo de configuración para TypeScript, define cómo se compila tu código."
 };
 
 const initialTree: Node[] = [
@@ -87,28 +87,40 @@ const initialTree: Node[] = [
 ];
 
 function FolderNode({ node, onSelect }: { node: Node; onSelect: (node: Node) => void }) {
+  const [open, setOpen] = useState(false);
   const isFile = node.children === undefined;
-  const icon = isFile ? "📄" : "📁";
+  const icon = isFile ? "📄" : open ? "📂" : "📁";
 
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, y: 50, scaleY: 2, skewY: 20 }}
-      transition={{ duration: 0.6 }}
+      initial={{ opacity: 0, x: -30, rotateY: -90 }}
+      animate={{ opacity: 1, x: 0, rotateY: 0 }}
+      exit={{ opacity: 0, x: -20, rotateY: 90 }}
+      transition={{ type: "spring", stiffness: 100, damping: 15 }}
       className="ml-4 border-l border-gray-400 pl-4 cursor-pointer"
       onClick={(e) => {
         e.stopPropagation();
+        if (!isFile) setOpen((prev) => !prev);
         onSelect(node);
       }}
     >
       {icon} <span className="select-none">{node.name}</span>
-      <div>
-        {node.children?.map((child) => (
-          <FolderNode key={child.id} node={child} onSelect={onSelect} />
-        ))}
-      </div>
+      <AnimatePresence>
+        {open && node.children && (
+          <motion.div
+            layout
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            {node.children.map((child) => (
+              <FolderNode key={child.id} node={child} onSelect={onSelect} />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
