@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { ArrowRight, ExternalLink } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import advantages from '@/utils/advantages'
 import {
@@ -147,7 +147,7 @@ export default function AdanPage() {
             ref={scrollIndicatorRef}
             className='mt-12 flex flex-col items-center text-gray-600 dark:text-white/60'
             style={{ willChange: 'transform, opacity' }}>
-            <p className='text-sm mb-4 animate-pulse'>Desplázate para explorar</p>
+            <p className='text-sm mb-4 animate-pulse'>Desplazarse para explorar</p>
             <div className='w-6 h-10 border-2 border-gray-400/30 dark:border-white/30 rounded-full flex justify-center'>
               <div className='scroll-wheel w-1 h-3 bg-gray-500/60 dark:bg-white/60 rounded-full mt-2'></div>
             </div>
@@ -192,6 +192,7 @@ interface AdvantageCardProps {
   title: string
   description: string
   color: string
+  iconColor: string
   bgColor: string
   cardRef?: (el: HTMLDivElement | null) => void
   isInteractive?: boolean
@@ -202,13 +203,13 @@ function AdvantageCard({
   title,
   description,
   color,
+  iconColor,
   bgColor,
   cardRef,
   isInteractive = false,
 }: AdvantageCardProps) {
   const slug = useMemo(() => generateSlug(title), [title])
   const category = useMemo(() => getCategoryFromTitle(title), [title])
-
   const cardClasses = useMemo(
     () =>
       `group relative p-6 rounded-2xl border border-border/50 ${bgColor} backdrop-blur-sm hover:border-primary/50 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300 ${
@@ -217,14 +218,9 @@ function AdvantageCard({
     [bgColor, isInteractive]
   )
 
-  const iconClasses = useMemo(
-    () =>
-      `text-foreground/80 group-hover:text-primary transition-all duration-300 ${color.replace(
-        'from-',
-        'text-'
-      )}`,
-    [color]
-  )
+  const iconClasses = useMemo(() => {
+    return `${iconColor} group-hover:text-primary transition-all duration-300`
+  }, [iconColor])
 
   const gradientClasses = useMemo(
     () =>
@@ -307,21 +303,6 @@ function AdvantageCard({
           <p className='text-muted-foreground leading-relaxed group-hover:text-foreground/90 transition-colors duration-300 mb-4'>
             {description}
           </p>
-
-          {/* Action button */}
-          <Button
-            variant='outline'
-            size='sm'
-            className='w-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'
-            asChild>
-            <Link
-              href={`/adan/${slug}`}
-              className='flex items-center justify-center gap-2'
-              prefetch={false}>
-              Explorar {title}
-              <ArrowRight size={16} />
-            </Link>
-          </Button>
         </div>
       </div>
     </div>
