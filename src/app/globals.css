@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
@@ -314,7 +313,8 @@ html {
 }
 
 .zoom-title {
-  font-family: 'Black Ops One', cursive;
+  /* fallback */
+  font-family: 'Black Ops One', 'Impact', 'Arial Black', sans-serif;
   font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;

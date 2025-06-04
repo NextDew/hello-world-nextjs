@@ -17,6 +17,14 @@ import {
 } from '@/utils/animation-config'
 import { useAdvantageAnimations } from '@/hooks/useAdvantageAnimations'
 import Image from 'next/image'
+import { Black_Ops_One } from 'next/font/google'
+
+const blackOpsOne = Black_Ops_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Impact', 'Arial Black', 'sans-serif'],
+})
 
 const GlowingEffect = lazy(() =>
   import('@/components/ui/glowing-effect').then((m) => ({
@@ -129,14 +137,17 @@ export default function AdanPage() {
     <div
       ref={containerRef}
       className='min-h-screen bg-white dark:bg-black relative overflow-hidden'>
-      {' '}
       <section className='h-screen flex items-center justify-center'>
         <div className='flex flex-col items-center'>
-          {' '}
           <h1
             ref={titleRef}
-            className='zoom-title text-5xl md:text-7xl text-center font-bold text-gray-900 dark:text-white px-4 leading-tight'
-            style={{ willChange: 'transform, opacity' }}>
+            className={`${blackOpsOne.className} text-5xl md:text-7xl text-center font-bold text-gray-900 dark:text-white px-4 leading-tight`}
+            style={{
+              willChange: 'transform, opacity',
+              letterSpacing: '0.05em',
+              textTransform: 'uppercase',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
+            }}>
             VENTAJAS
             <br />
             <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
