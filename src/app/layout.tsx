@@ -29,14 +29,12 @@ export default function RootLayout({
   return (
     <html lang='es' suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${manrope.variable} font-sans antialiased`}
-      >
+        className={`${inter.variable} ${manrope.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
           enableSystem
-          disableTransitionOnChange
-        >
+          disableTransitionOnChange>
           <Navbar />
           {children}
         </ThemeProvider>
