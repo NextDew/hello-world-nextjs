@@ -23,6 +23,7 @@ const descriptions: Record<string, string> = {
   "README.md": "Documentación básica del proyecto.",
   "package.json": "Dependencias y scripts del proyecto.",
   ".gitignore": "Es un archivo que le dice a Git qué archivos o carpetas debe ignorar.",
+  "components.json": "Es un archivo con la configuración específica de shadcn/ui que permite definir cómo deben generarse, organizarse y estilizarse los componentes UI en tu proyecto.",
   "next-env.d.ts": "Archivo generado automáticamente por Next.js para habilitar soporte de TypeScript y autocompletado en el entorno.",
   "next.config.ts": "Archivo de configuración principal de Next.js donde puedes personalizar rutas, imágenes, middleware, etc.",
   "package-lock.json": "Registra las versiones exactas de cada dependencia instalada para asegurar instalaciones consistentes en todos los entornos.",
