@@ -76,7 +76,7 @@ export default function AnaPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-        Página de Ana
+        ¿Por qué elegir un framework?
       </h1>
       <CardList cards={cards} onSelect={setSelectedCard} />
       {selectedCard !== null && (
