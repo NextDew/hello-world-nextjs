@@ -1,3 +1,4 @@
+// Author: Adan
 import Image from 'next/image'
 import {
   Card,
@@ -94,7 +95,11 @@ export default async function SSRPage() {
               <div className='flex items-start gap-3'>
                 <Server className='h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0' />
                 <p className='text-sm text-muted-foreground leading-relaxed'>
-                  <strong className='text-foreground'>¿Cómo funciona?</strong> Al visitar esta página, Next.js ejecuta el código en el servidor, obtiene los datos y genera el HTML final antes de enviarlo al navegador. Es ideal para contenido dinámico, personalizado o que depende de datos en tiempo real.
+                  <strong className='text-foreground'>¿Cómo funciona?</strong> Al
+                  visitar esta página, Next.js ejecuta el código en el servidor,
+                  obtiene los datos y genera el HTML final antes de enviarlo al
+                  navegador. Es ideal para contenido dinámico, personalizado o que
+                  depende de datos en tiempo real.
                 </p>
               </div>
             </CardContent>
@@ -107,7 +112,10 @@ export default async function SSRPage() {
               <div className='flex items-start gap-3'>
                 <RefreshCw className='h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0' />
                 <p className='text-sm text-muted-foreground leading-relaxed'>
-                  <strong className='text-foreground'>Comprobación:</strong> Al recargar la página cambia el Pokémon. Si se inspecciona el HTML, los datos ya están presentes antes de que el navegador ejecute JavaScript.
+                  <strong className='text-foreground'>Comprobación:</strong> Al
+                  recargar la página cambia el Pokémon. Si se inspecciona el HTML,
+                  los datos ya están presentes antes de que el navegador ejecute
+                  JavaScript.
                 </p>
               </div>
             </CardContent>

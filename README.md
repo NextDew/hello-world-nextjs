@@ -243,7 +243,7 @@ npm run lint
 
 ## Deployment
 
-### Vercel (Recommended)
+### Vercel
 
 The easiest way to deploy Next Journey is using the [Vercel Platform](https://vercel.com/new):
 

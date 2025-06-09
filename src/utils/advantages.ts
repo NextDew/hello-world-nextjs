@@ -1,3 +1,5 @@
+// Author: Adan
+// This file contains a list of advantages of using Next.js, each with a title, description, and icon.
 import { FolderTree, Plug, Globe, Server, Zap, Layers } from 'lucide-react'
 
 const advantages = [

@@ -243,7 +243,7 @@ npm run lint
 
 ## Despliegue
 
-### Vercel (Recomendado)
+### Vercel
 
 La forma más fácil de desplegar Next Journey es usando la [Plataforma Vercel](https://vercel.com/new):
 

@@ -1,4 +1,6 @@
 'use client'
+// Author: Kevin & Domingo
+
 import { ArrowRight, BookText } from 'lucide-react'
 import Link from 'next/link'
 

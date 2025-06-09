@@ -1,3 +1,4 @@
+// Author: Adan
 import Image from 'next/image'
 import {
   Card,

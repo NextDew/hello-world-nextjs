@@ -1,3 +1,4 @@
+// Author: Adan
 'use client'
 
 import Image from 'next/image'
