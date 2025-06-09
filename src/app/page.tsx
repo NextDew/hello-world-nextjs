@@ -12,9 +12,12 @@ export default function Home() {
           <div className='inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 mb-4 dark:bg-neutral-800 dark:text-gray-200'>
             React Framework
           </div>
-          <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-gray-100 dark:to-gray-400'>
+          {/* <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-gray-100 dark:to-gray-400'>
             Next.js
-          </h1>{' '}
+          </h1>{' '} */}
+          <h1 className='text-5xl md:text-6xl font-bold mb-6 pb-1 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-gray-100 dark:to-gray-400 leading-tight'>
+            Next.js
+          </h1>
           <p className='text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed dark:text-gray-300'>
             El framework de React para producción que permite crear aplicaciones web
             rápidas, escalables y optimizadas para SEO
