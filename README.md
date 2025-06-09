@@ -5,7 +5,7 @@ A comprehensive demonstration project showcasing the complete power and versatil
 [![Next.js](https://img.shields.io/badge/Next.js-15.3.2-black)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC)](https://tailwindcss.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC)](https://tailwindcss.com/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-black?logo=shadcnui&labelColor=black)](https://ui.shadcn.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?logo=framer&labelColor=black)](https://www.framer.com/motion/)
 [![GSAP](https://img.shields.io/badge/GSAP-88CE02?logo=greensock&labelColor=black)](https://gsap.com/)
