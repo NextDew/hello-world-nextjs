@@ -1,3 +1,5 @@
+// Author: Adan
+// This file contains configuration settings for animations used in a web application.
 export const ANIMATION_CONFIG = {
   CARD_HOVER_DURATION: 0.15,
   ZOOM_DURATION: 2,
@@ -29,7 +31,7 @@ export const ANIMATION_CONFIG = {
     from: 'random' as const,
     ease: 'power2.out',
   },
-} as const;
+} as const
 
 export const SLUG_MAP: Record<string, string> = {
   'Server Side Rendering (SSR)': 'ssr',
@@ -38,17 +40,17 @@ export const SLUG_MAP: Record<string, string> = {
   'Client Side Rendering (CSR)': 'csr',
   'App Router': 'app-router',
   'API Routes': 'api-routes',
-} as const;
+} as const
 
 export const getCategoryFromTitle = (title: string): string => {
-  if (title.includes('SSR') || title.includes('Server')) return 'Rendering';
-  if (title.includes('SSG') || title.includes('Static')) return 'Performance';
-  if (title.includes('ISR') || title.includes('Incremental')) return 'Hybrid';
-  if (title.includes('CSR') || title.includes('Client')) return 'Interactive';
-  if (title.includes('Router') || title.includes('App')) return 'Navigation';
-  if (title.includes('API')) return 'Backend';
-  return 'Core';
-};
+  if (title.includes('SSR') || title.includes('Server')) return 'Rendering'
+  if (title.includes('SSG') || title.includes('Static')) return 'Performance'
+  if (title.includes('ISR') || title.includes('Incremental')) return 'Hybrid'
+  if (title.includes('CSR') || title.includes('Client')) return 'Interactive'
+  if (title.includes('Router') || title.includes('App')) return 'Navigation'
+  if (title.includes('API')) return 'Backend'
+  return 'Core'
+}
 
 export const generateSlug = (title: string): string => {
   return (
@@ -57,5 +59,5 @@ export const generateSlug = (title: string): string => {
       .toLowerCase()
       .replace(/\s+/g, '-')
       .replace(/[^\w-]/g, '')
-  );
-};
+  )
+}

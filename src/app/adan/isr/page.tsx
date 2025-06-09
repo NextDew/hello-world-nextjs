@@ -1,3 +1,4 @@
+// Author: Adan
 import Image from 'next/image'
 import {
   Card,
@@ -19,7 +20,7 @@ function getCurrentSlot() {
 
 function getGenerationTime(slot: number) {
   const slotStartTime = slot * 15 * 1000
-  const baseTime = new Date('2025-01-01T00:00:00Z').getTime()
+  const baseTime = new Date().setUTCHours(0, 0, 0, 0)
   const generationTime = new Date(baseTime + slotStartTime)
 
   return (

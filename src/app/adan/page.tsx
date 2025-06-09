@@ -1,5 +1,7 @@
 'use client'
 
+// Author: Adan
+
 import { useState, useMemo, useCallback, lazy, Suspense } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'

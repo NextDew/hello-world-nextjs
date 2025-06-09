@@ -1,3 +1,4 @@
+// Author: Adan
 import { NextResponse } from 'next/server'
 
 // Simulate a MongoDB query

@@ -1,28 +1,30 @@
-'use client';
-import { cn } from '@/lib/utils';
-import { motion } from 'motion/react';
-import React, { useMemo } from 'react';
+'use client'
+// Author: Adan
+// This component creates a meteor shower effect using CSS animations and React hooks.
+import { cn } from '@/lib/utils'
+import { motion } from 'motion/react'
+import React, { useMemo } from 'react'
 
 export const Meteors = ({
   number,
   className,
 }: {
-  number?: number;
-  className?: string;
+  number?: number
+  className?: string
 }) => {
   const meteorData = useMemo(() => {
-    const meteorCount = number || 20;
+    const meteorCount = number || 20
     return new Array(meteorCount).fill(true).map((_, idx) => {
-      const seed1 = (idx * 123.456) % 1;
-      const seed2 = (idx * 789.012) % 1;
+      const seed1 = (idx * 123.456) % 1
+      const seed2 = (idx * 789.012) % 1
 
       return {
         position: idx * (800 / meteorCount) - 400,
         delay: seed1 * 5,
         duration: 5 + seed2 * 5,
-      };
-    });
-  }, [number]);
+      }
+    })
+  }, [number])
 
   return (
     <motion.div
@@ -45,5 +47,5 @@ export const Meteors = ({
           }}></span>
       ))}
     </motion.div>
-  );
-};
+  )
+}
