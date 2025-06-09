@@ -69,8 +69,10 @@ export default function KevinPage() {
         npx create-next-app@latest
       </div>
 
-      <div className='mt-2 px-6 py-4 bg-white dark:bg-neutral-800 rounded-b-lg border border-t-0 border-gray-200 dark:border-neutral-700 text-gray-800 dark:text-gray-100 text-base'>
-        <Callout.Root className='mb-4 border-l-4 border-black bg-black text-white dark:border-white dark:bg-white dark:text-black flex items-center gap-3 px-4 py-3'>
+      {/* <div className='mt-2 px-6 py-4 bg-white dark:bg-neutral-800 rounded-b-lg border border-t-0 border-gray-200 dark:border-neutral-700 text-gray-800 dark:text-gray-100 text-base'> */}
+      <div className='mt-2 px-6 py-4 bg-white dark:bg-neutral-800 rounded-lg border border-t-0 border-gray-200 dark:border-neutral-700 text-gray-800 dark:text-gray-100 text-base'>
+        {/* <Callout.Root className='mb-4 border-l-4 border-black bg-black text-white dark:border-white dark:bg-white dark:text-black flex items-center gap-3 px-4 py-3'> */}
+        <Callout.Root className='mb-4 border-l-4 border-black bg-black text-white dark:border-white dark:bg-white dark:text-black flex items-center gap-3 px-4 py-3 rounded-lg'>
           <Callout.Icon>
             <Upload className='text-white dark:text-black' />
           </Callout.Icon>
@@ -129,7 +131,8 @@ export default function KevinPage() {
         ))}
       </div>
 
-      <Callout.Root className='mb-4 border-l-4 border-black bg-black text-white dark:border-white dark:bg-white dark:text-black flex items-center gap-3 px-4 py-3'>
+      {/* <Callout.Root className='mb-4 border-l-4 border-black bg-black text-white dark:border-white dark:bg-white dark:text-black flex items-center gap-3 px-4 py-3'> */}
+      <Callout.Root className='mb-4 border-l-4 border-black bg-black text-white dark:border-white dark:bg-white dark:text-black flex items-center gap-3 px-4 py-3 rounded-lg'>
         <Callout.Icon>
           <Info className='text-white dark:text-black' />
         </Callout.Icon>
