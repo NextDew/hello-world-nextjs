@@ -10,12 +10,12 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 
 const navItems = [
-  { name: 'Adán', href: '/adan' },
-  { name: 'Ana', href: '/ana' },
-  { name: 'Domingo', href: '/domingo' },
-  { name: 'Javier', href: '/javier' },
-  { name: 'Kevin', href: '/kevin' },
-  { name: 'Mario', href: '/mario' },
+  { name: 'Framework', href: '/ana' },
+  { name: 'Ventajas', href: '/adan' },
+  { name: 'Desventajas', href: '/javier' },
+  { name: 'Comparativa', href: '/mario' },
+  { name: 'Instalación', href: '/kevin' },
+  { name: 'Scafolding', href: '/domingo' },
 ]
 
 export default function Navbar() {
